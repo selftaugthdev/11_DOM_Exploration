@@ -28,8 +28,11 @@ const learners = [
 // Get the <article> element
 const article = document.querySelector('article');
 
+// Shuffle the list
+const shuffledLearners = learners.sort(() => Math.random() - 0.5)
+
 // Loop through the learners array
-learners.forEach(learnerName => {
+learners.forEach(student => {
     // Create a new <section> element
     const section = document.createElement('section');
 
@@ -38,8 +41,15 @@ learners.forEach(learnerName => {
 
     // Create a <p> element with the learner's name
     const paragraph = document.createElement('p');
-    paragraph.textContent = learnerName;
+    paragraph.textContent = student;
 
+    //TODO: If the background is DARK the text should be WHITE and Vice Versa
+    
+    if(getRandomColor.colorData >= 0.5) {
+        paragraph.style.color = "black"
+    } else {
+        paragraph.style.color = "white"
+    }
     // Append the paragraph to the <section> and the <section> to the <article>
     section.appendChild(paragraph);
     article.appendChild(section);
@@ -51,6 +61,11 @@ function getRandomColor() {
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
 
-    // Construct the CSS color string
+    const colorData = luminance = 0.2126 * (r / 255) + 0.7152 * (g / 255) + 0.0722 * (b / 255)
+
+    // Return the CSS color string
     return `rgb(${r},${g},${b})`;
 }
+
+ 
+
