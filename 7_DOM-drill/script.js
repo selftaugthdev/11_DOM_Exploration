@@ -22,7 +22,7 @@ for (let i = 0; i < listItems.length; i++) {
     listItems[i].addEventListener('click', () => {
         alert(listItems[i].innerText);
         if (listItems[i].textContent.includes("Fast and Furious")) {
-            alert("The most important franchise ever, the story of DOM(inic) Toretto's family. It's not about car, it's about family.")
+            alert("The most important franchise ever, the story of DOM(inic) Toretto's family. It's not about cars, it's about family.")
         }
     })
   }
