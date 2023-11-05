@@ -71,6 +71,41 @@ const collection = [
     }
 ]
 
-const cardBody = document.getElementsByClassName("card")
+let cardBody = document.getElementsByClassName("card")
+console.log(cardBody)
 
-c
+const fillCard = () => {
+    collection.forEach(postData => {
+        const cardElement = document.createElement("div")
+        cardElement.classList.add("card")
+        cardElement.innerHTML = `
+        <img src="img_avatar.png" alt="Image" style="width:100%">
+        <div class="container">
+            <h4 class="genre"></h4>
+            <h4 class="releaseYear"></h4>
+          <h3 class="name"><b></b></h3>
+          <h3 class="studio"></h3>
+          <h3 class="platform"></h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tempora repudiandae possimus debitis pariatur perspiciatis ipsa sit vitae commodi, hic, nobis natus dolor. Dolorum quam ipsum odit quisquam! Officiis, nesciunt.
+          </p>
+        </div>
+        `
+        cardBody[0].appendChild(cardElement)
+    });
+}
+
+fillCard()
+
+
+{/* <img src="img_avatar.png" alt="Image" style="width:100%">
+        <div class="container">
+            <h4 class="genre"></h4>
+            <h4 class="year"></h4>
+          <h3 class="name"><b></b></h3>
+          <h3 class="studio"></h3>
+          <h3 class="platform"></h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tempora repudiandae possimus debitis pariatur perspiciatis ipsa sit vitae commodi, hic, nobis natus dolor. Dolorum quam ipsum odit quisquam! Officiis, nesciunt.
+          </p>
+        </div> */}
