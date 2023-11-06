@@ -3,31 +3,34 @@
     margin: 0;
 }
 
-/* .body {
+.body {
     width: 100vw;
     box-sizing: border-box;
-} */
+}
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     padding: 2px 16px;
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: row; /* Stack content vertically */
     align-items: center; 
-    /* flex:20%; */
+    flex:20%;
+    /* flex: 15rem */
   }
   
   .container {
-    /* display: flex;
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap; */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+    gap: 1rem;
+    flex: 20%;
   }
   
   .card img {
-    max-width: 100%; /* Ensure the image stays within the card */
+    max-width: 80%; /* Ensure the image stays within the card */
+    align-items: center;
   }
   
   .name {
