@@ -108,3 +108,49 @@ toggleBtn.onclick = (e) => {
         disableDarkMode();
     }
 }
+  
+// Function for the CART feature
+document.addEventListener("DOMContentLoaded", function() {
+    const cartModal = document.getElementById("cart-modal");
+    const cartItemsList = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    const resetCartButton = document.getElementById("reset-cart"); // Updated button ID
+    const addToCartButtons = document.querySelectorAll(".orderButton");
+
+    let cart = [];
+    let total = 0;
+
+    // Function to update the cart content
+    function updateCart() {
+        cartItemsList.innerHTML = ''; // Clear the cart items
+        cart.forEach(price => {
+            const cartItem = document.createElement('li');
+            cartItem.textContent = `Item: $${price.toFixed(2)}`;
+            cartItemsList.appendChild(cartItem);
+        });
+        cartTotal.textContent = `$${total.toFixed(2)}`;
+    }
+
+    // Event listener for the "ORDER" buttons
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const card = button.closest(".card");
+            const priceElement = card.querySelector(".price");
+            const price = parseFloat(priceElement.textContent.replace("$", ""));
+            cart.push(price);
+            total += price;
+            updateCart();
+        });
+    });
+
+    // Event listener for the "Reset" button
+    // Event listener for the "Reset" button
+resetCartButton.addEventListener("click", function() {
+    console.log("Reset button clicked"); // Add this line for debugging
+});
+
+});
+
+
+
+
