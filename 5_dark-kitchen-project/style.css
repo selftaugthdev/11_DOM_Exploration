@@ -4,7 +4,12 @@
 }
 
 body {
-    background-color: #100d7c;
+    background-color: wheat;
+    color: black;
+}
+
+body.dark {
+    background-color: #49046b;
     color: white;
 }
 
@@ -34,6 +39,7 @@ body {
 .menu-item {
     margin: 0 10px;
     padding: 10px;
+    font-weight: 700;
 }
 
 /* Style the sections and footer as needed */
@@ -55,6 +61,7 @@ body {
     background-size: cover;
     position: relative;
     Opacity: 0.75;
+    z-index: -10;
     /* Add this to create a stacking context */
 }
 
@@ -78,10 +85,17 @@ body {
     font-size: xx-large;
 }
 
-.section2 {
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; */
+#toggle-btn {
+    height: 70px;
+    width: 70px;
+    line-height: 69px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 30px;    
+    cursor: pointer;
+    text-align: center; 
+    position: fixed;
 }
 
 .cardContainer {
@@ -128,6 +142,14 @@ body {
     font-size: 17px;
     border-radius: 5px;
     padding: 8px 25px;
+}
+
+.card .price {
+    font-weight: bold;
+}
+
+.card .category {
+    font-style: italic;
 }
 
 .card button:hover {
