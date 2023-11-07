@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.maze {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30px);
+    gap: 0;
+}
+
+.wall {
+    background-image: url(./images/brick_wall.jpeg);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+.start {
+    background-image: url(./images/Mario.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+.target {
+    background-image: url(./images/pixel_princess_peach.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+.path {
+    background-image: url(./images/path.jpeg);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
