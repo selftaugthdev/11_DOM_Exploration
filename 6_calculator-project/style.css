@@ -1,0 +1,73 @@
+/* .calculatorBody {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+}
+
+.operations {
+    padding: 10px;
+    text-align: center;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.digits {
+        padding: 10px;
+        text-align: center;
+        background-color: #e0e0e0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    } */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: rgb(207, 207, 165);
+}
+
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 10px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            border: 2px solid #b72096;
+            background-image: linear-gradient(to right, rgb(242, 68, 242), rgb(161, 207, 238));
+        }
+    
+        .screen {
+            width: 85%;
+            /* height: 40px; */
+            padding: 10px;
+            text-align: right;
+            background-color: #f0f0f0;
+            border: 1px solid #7e7e7e;
+            font-size: 24px;
+        }
+    
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            gap: 1rem;
+        }
+    
+        button {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            background-color: #e0e0e0;
+            border: 1px solid #ff41e6;
+            cursor: pointer;
+            font-size: 48px;
+            width: 100px; /* Set a fixed width for all buttons */
+            height: 100px; /* Set a fixed height for all buttons */
+        }
